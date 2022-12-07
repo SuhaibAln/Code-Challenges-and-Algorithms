@@ -7,7 +7,9 @@ class Node {
 }
 
 class LinkedList {
-  constructor() { this.head = null }
+  constructor() {
+    this.head = null;
+  }
   append(value) {
     let node = new Node(value);
     if (this.head) {
@@ -29,19 +31,20 @@ class HashTable {
   }
 
   hash(key) {
-    let ascii = key.split('').reduce(
-        (acc, item) => { return item.charCodeAt() + acc; }, 0);
-    return (ascii * 599) % (this.size);
+    let ascii = key.split("").reduce((acc, item) => {
+      return item.charCodeAt() + acc;
+    }, 0);
+    return (ascii * 599) % this.size;
   }
 
   set(key, value) {
     let index = this.hash(key);
     if (this.table[index]) {
-      this.table[index].append({[key] : value});
+      this.table[index].append({ [key]: value });
     } else {
       const ll = new LinkedList();
       this.table[index] = ll;
-      ll.append({[key] : value});
+      ll.append({ [key]: value });
     }
   }
 
@@ -57,7 +60,7 @@ class HashTable {
         }
       }
     } else {
-      console.log('index is empty');
+      console.log("index is empty");
     }
   }
 }
@@ -67,14 +70,14 @@ class HashTable {
 
 function firstWordRepet(str) {
   let obj = new HashTable(10);
-  let arr = str.split(' ');
+  let arr = str.split(" ");
   for (let i = 0; i < arr.length; i++) {
     obj[arr[i]] = arr[i];
     if (obj[arr[i + 1]]) {
       return arr[i + 1];
     }
   }
-  return 'No Repetition';
+  return "No Repetition";
 }
 
-module.exports = {firstWordRepet}
+module.exports = { firstWordRepet };
