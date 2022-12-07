@@ -8,9 +8,7 @@ class Node {
 }
 
 class Tree {
-  constructor() {
-    this.root = null;
-  }
+  constructor() { this.root = null; }
 
   add(value) {
     const node = new Node(value);
@@ -42,8 +40,10 @@ const sumTree = (tree, target) => {
   let hash = {};
 
   const traverse = (node) => {
-    if (!node) return false;
-    if (hash[target - node.value]) return true;
+    if (!node)
+      return false;
+    if (hash[target - node.value])
+      return true;
     hash[node.value] = true;
 
     return traverse(node.left) || traverse(node.right);

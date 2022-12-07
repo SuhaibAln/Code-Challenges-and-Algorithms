@@ -1,5 +1,5 @@
 // Write your test here
-const { firstWordRepet } = require('./challenge02');
+const {firstWordRepet} = require('./challenge02');
 
 describe('HashTable Challenge-02', () => {
   test('firstWordRepet function test-01', () => {
@@ -17,5 +17,4 @@ describe('HashTable Challenge-02', () => {
     let word = firstWordRepet(str);
     expect(word).toEqual('No Repetition');
   });
-
 });

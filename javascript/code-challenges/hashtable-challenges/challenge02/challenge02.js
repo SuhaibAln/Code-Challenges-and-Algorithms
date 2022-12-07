@@ -7,9 +7,7 @@ class Node {
 }
 
 class LinkedList {
-  constructor() {
-    this.head = null
-  }
+  constructor() { this.head = null }
   append(value) {
     let node = new Node(value);
     if (this.head) {
@@ -31,20 +29,19 @@ class HashTable {
   }
 
   hash(key) {
-    let ascii = key.split('').reduce((acc, item) => {
-      return item.charCodeAt() + acc;
-    }, 0);
+    let ascii = key.split('').reduce(
+        (acc, item) => { return item.charCodeAt() + acc; }, 0);
     return (ascii * 599) % (this.size);
   }
 
   set(key, value) {
     let index = this.hash(key);
     if (this.table[index]) {
-      this.table[index].append({ [key]: value });
+      this.table[index].append({[key] : value});
     } else {
       const ll = new LinkedList();
       this.table[index] = ll;
-      ll.append({ [key]: value });
+      ll.append({[key] : value});
     }
   }
 
@@ -65,8 +62,8 @@ class HashTable {
   }
 }
 
-//=============================================================== Classes ===============================================================//
-
+//=============================================================== Classes
+//===============================================================//
 
 function firstWordRepet(str) {
   let obj = new HashTable(10);
@@ -80,6 +77,4 @@ function firstWordRepet(str) {
   return 'No Repetition';
 }
 
-module.exports = {
-  firstWordRepet
-}
+module.exports = {firstWordRepet}
