@@ -12,7 +12,7 @@ Return True if Binary search tree has two elements that their summation is the g
 <p><strong>Example 1:</strong></p>
 
 <pre><strong>Input:</strong> The previous Binary Search tree ==> root = [7,2,9,1,5,null,14], k = 3
-  
+
 <strong>Output:</strong> true
 </pre>
 
@@ -20,7 +20,7 @@ Return True if Binary search tree has two elements that their summation is the g
 <p><strong>Example 1:</strong></p>
 
 <pre><strong>Input:</strong> The previous Binary Search tree ==> root = [7,2,9,1,5,null,14], k = 4
-  
+
 <strong>Output:</strong> true
 </pre>
 

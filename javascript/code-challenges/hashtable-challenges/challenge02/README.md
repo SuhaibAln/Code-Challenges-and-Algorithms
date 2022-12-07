@@ -8,7 +8,7 @@ Write a function that will take a <strong>string</strong> as a parameter and ret
 <p><strong>Example 1:</strong></p>
 
 <pre><strong>Input:</strong> ASAC is a department at LTUC. ASAC teaches programming in LTUC.
-  
+
 <strong>Output:</strong> ASAC
 </pre>
 
@@ -16,7 +16,7 @@ Write a function that will take a <strong>string</strong> as a parameter and ret
 <p><strong>Example 2:</strong></p>
 
 <pre><strong>Input:</strong> I am learning programming at ASAC.
-  
+
 <strong>Output:</strong> No Repetition
 </pre>
 
