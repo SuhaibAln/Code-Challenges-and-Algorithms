@@ -8,7 +8,7 @@ class Node {
 
 class LinkedList {
   constructor() {
-    this.head = null
+    this.head = null;
   }
   append(value) {
     let node = new Node(value);
@@ -31,10 +31,10 @@ class HashTable {
   }
 
   hash(key) {
-    let ascii = key.split('').reduce((acc, item) => {
+    let ascii = key.split("").reduce((acc, item) => {
       return item.charCodeAt() + acc;
     }, 0);
-    return (ascii * 599) % (this.size);
+    return (ascii * 599) % this.size;
   }
 
   set(key, value) {
@@ -60,26 +60,24 @@ class HashTable {
         }
       }
     } else {
-      console.log('index is empty');
+      console.log("index is empty");
     }
   }
 }
 
-//=============================================================== Classes ===============================================================//
-
+//=============================================================== Classes
+//===============================================================//
 
 function firstWordRepet(str) {
   let obj = new HashTable(10);
-  let arr = str.split(' ');
+  let arr = str.split(" ");
   for (let i = 0; i < arr.length; i++) {
     obj[arr[i]] = arr[i];
     if (obj[arr[i + 1]]) {
       return arr[i + 1];
     }
   }
-  return 'No Repetition';
+  return "No Repetition";
 }
 
-module.exports = {
-  firstWordRepet
-}
+module.exports = { firstWordRepet };
